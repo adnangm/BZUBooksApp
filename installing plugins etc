@@ -1,0 +1,5 @@
+1. yarn add react-native-splash-screen  ...but not using this
+2. react-native-navigation,,,,Stack,Drawer
+3. react-native-vector-icons
+4. yarn add @react-navigation/material-bottom-tabs@^5.x react-native-paper react-native-vector-icons
+5. 
