@@ -9,13 +9,11 @@ import MIcon from 'react-native-vector-icons/MaterialIcons';
 
 import HomeScreen from './HomeScreen';
 import CategoryScreen from './CategoryScreen';
-import WhislistScreen from './WhislistScreen';
 import SearchScreen from './SearchScreen';
 
 const HomeStack = createStackNavigator();
 const CategoryStack = createStackNavigator();
 const SearchStack = createStackNavigator();
-const WhishlistStack = createStackNavigator();
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -40,7 +38,7 @@ const MainTabScreen = () => (
         component={CategoryStackScreen}
         options={{
           tabBarLabel: 'Categories',
-          tabBarColor: '#1f65ff',
+          tabBarColor: '#063b91',
           tabBarIcon: ({ color }) => (
             <MIcon name="category" color={color} size={26} />
           ),
@@ -51,23 +49,13 @@ const MainTabScreen = () => (
         component={SearchStackScreen}
         options={{
           tabBarLabel: 'Search',
-          tabBarColor: '#694fad',
+          tabBarColor: '#063b91',
           tabBarIcon: ({ color }) => (
             <Icon name="search" color={color} size={26} />
           ),
         }}
       />
-      <Tab.Screen
-        name="Whishlist"
-        component={WhishlistStackScreen}
-        options={{
-          tabBarLabel: 'Whishlist',
-          tabBarColor: '#d02860',
-          tabBarIcon: ({ color }) => (
-            <MIcon name="favorite" color={color} size={26} />
-          ),
-        }}
-      />
+     
     </Tab.Navigator>
 );
 
@@ -95,7 +83,7 @@ const HomeStackScreen = ({navigation}) => (
 const CategoryStackScreen = ({navigation}) => (
 <CategoryStack.Navigator screenOptions={{
         headerStyle: {
-        backgroundColor: '#1f65ff',
+        backgroundColor: '#063b91',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
@@ -104,7 +92,7 @@ const CategoryStackScreen = ({navigation}) => (
     }}>
         <CategoryStack.Screen name="Categories" component={CategoryScreen} options={{
         headerLeft: () => (
-            <Icon.Button name="ios-menu" size={25} backgroundColor="#1f65ff" onPress={() => navigation.openDrawer()}></Icon.Button>
+            <Icon.Button name="ios-menu" size={25} backgroundColor="#063b91" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
         }} />
 </CategoryStack.Navigator>
@@ -113,7 +101,7 @@ const CategoryStackScreen = ({navigation}) => (
 const SearchStackScreen = ({navigation}) => (
   <SearchStack.Navigator screenOptions={{
           headerStyle: {
-          backgroundColor: '#694fad',
+          backgroundColor: '#063b91',
           },
           headerTintColor: '#fff',
           headerTitleStyle: {
@@ -122,27 +110,9 @@ const SearchStackScreen = ({navigation}) => (
       }}>
           <SearchStack.Screen name="Search A Book" component={SearchScreen} options={{
           headerLeft: () => (
-              <Icon.Button name="ios-menu" size={25} backgroundColor="#694fad" onPress={() => navigation.openDrawer()}></Icon.Button>
+              <Icon.Button name="ios-menu" size={25} backgroundColor="#063b91" onPress={() => navigation.openDrawer()}></Icon.Button>
           )
           }} />
   </SearchStack.Navigator>
   );
   
-
-  const WhishlistStackScreen = ({navigation}) => (
-    <WhishlistStack.Navigator screenOptions={{
-            headerStyle: {
-            backgroundColor: '#d02860',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-            fontWeight: 'bold'
-            }
-        }}>
-            <WhishlistStack.Screen name="Whishlist" component={WhislistScreen} options={{
-            headerLeft: () => (
-                <Icon.Button name="ios-menu" size={25} backgroundColor="#d02860" onPress={() => navigation.openDrawer()}></Icon.Button>
-            )
-            }} />
-    </WhishlistStack.Navigator>
-    );

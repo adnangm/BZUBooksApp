@@ -34,6 +34,7 @@ import { AuthContext } from './components/context';
 import RootStackScreen from './screens/RootStackScreen';
 
 import AsyncStorage from '@react-native-community/async-storage';
+import StudentsScreens from './screens/studentScreens/StudentsScreens';
 
 const Drawer = createDrawerNavigator();
 
@@ -166,6 +167,7 @@ const App = () => {
   return (
     <PaperProvider theme={theme}>
       <StatusBar  />
+      {/* <StatusBar backgroundColor='#063b91' barStyle="light-content"/> */}
     <AuthContext.Provider value={authContext}>
     <NavigationContainer theme={theme}>
       { loginState.userToken !== null ? (

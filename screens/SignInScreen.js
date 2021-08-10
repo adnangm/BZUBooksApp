@@ -19,6 +19,7 @@ import { useTheme } from 'react-native-paper';
 import { AuthContext } from '../components/context';
 
 import Users from '../model/users';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const SignInScreen = ({navigation}) => {
 
@@ -114,9 +115,10 @@ const SignInScreen = ({navigation}) => {
 
     return (
       <View style={styles.container}>
-          <StatusBar backgroundColor='#009387' barStyle="light-content"/>
+        <ScrollView>
+          <StatusBar backgroundColor='#063b91' barStyle="light-content"/>
         <View style={styles.header}>
-            <Text style={styles.text_header}>Welcome!</Text>
+            <Text style={styles.text_header}>Welcome Dear Teacher!</Text>
         </View>
         <Animatable.View 
             animation="fadeInUpBig"
@@ -208,7 +210,7 @@ const SignInScreen = ({navigation}) => {
             
 
             <TouchableOpacity>
-                <Text style={{color: '#009387', marginTop:15}}>Forgot password?</Text>
+                <Text style={{color: '#063b91', marginTop:15}}>Forgot password?</Text>
             </TouchableOpacity>
             <View style={styles.button}>
                 <TouchableOpacity
@@ -216,7 +218,7 @@ const SignInScreen = ({navigation}) => {
                     onPress={() => {loginHandle( data.username, data.password )}}
                 >
                 <LinearGradient
-                    colors={['#08d4c4', '#01ab9d']}
+                    colors={['#4183f0', '#093e96']}
                     style={styles.signIn}
                 >
                     <Text style={[styles.textSign, {
@@ -228,17 +230,19 @@ const SignInScreen = ({navigation}) => {
                 <TouchableOpacity
                     onPress={() => navigation.navigate('SignUpScreen')}
                     style={[styles.signIn, {
-                        borderColor: '#009387',
+                        borderColor: '#063b91',
                         borderWidth: 1,
                         marginTop: 15
                     }]}
                 >
                     <Text style={[styles.textSign, {
-                        color: '#009387'
+                        color: '#063b91'
                     }]}>Sign Up</Text>
                 </TouchableOpacity>
             </View>
+
         </Animatable.View>
+        </ScrollView>
       </View>
     );
 };
@@ -248,26 +252,37 @@ export default SignInScreen;
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
-      backgroundColor: '#009387'
+      backgroundColor: '#063b91'
     },
     header: {
         flex: 1,
         justifyContent: 'flex-end',
         paddingHorizontal: 20,
-        paddingBottom: 50
+        paddingBottom: '4%',
+        paddingTop: '4%'
+        //marginTop: '-15%'
     },
     footer: {
         flex: 3,
         backgroundColor: '#fff',
-        borderTopLeftRadius: 30,
+        //borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         paddingHorizontal: 20,
-        paddingVertical: 30
+        paddingVertical: '20%',
+        borderBottomLeftRadius: 30
     },
     text_header: {
         color: '#fff',
         fontWeight: 'bold',
-        fontSize: 30
+        fontSize: 20,
+        //marginTop: '2%'
+    },
+    text_header2: {
+        color: '#50eb79',
+        fontWeight: 'bold',
+        fontSize: 16,
+        textAlign: 'center',
+        marginTop: '2%'
     },
     text_footer: {
         color: '#05375a',
@@ -300,6 +315,10 @@ const styles = StyleSheet.create({
     button: {
         alignItems: 'center',
         marginTop: 50
+    },
+    buttonStudent: {
+        alignItems: 'center',
+        marginTop: 20
     },
     signIn: {
         width: '100%',

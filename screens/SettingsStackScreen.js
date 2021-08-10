@@ -13,7 +13,7 @@ const SettingsStackScreen = ({navigation}) => {
     <SettingsStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#009387'
+        backgroundColor: '#063b91'
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -25,7 +25,7 @@ const SettingsStackScreen = ({navigation}) => {
       options={{
         title: "Settings",
       headerLeft: () => (
-        <Icon.Button name="arrow-back" size={25} backgroundColor="#009387" onPress={() => navigation.goBack()}></Icon.Button>
+        <Icon.Button name="arrow-back" size={25} backgroundColor="#063b91" onPress={() => navigation.goBack()}></Icon.Button>
       )
       }}
       />
