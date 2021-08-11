@@ -1,0 +1,34 @@
+we use isLoading to show loader at time we check the user is login or not,
+const [isLoading, setIsloading] = React.useState(true);
+if (isLoading) {
+    return (
+        <View styling etc.>
+            <ActivityIndicator size="large" />
+        </View>
+    );
+}
+
+we use useEffect to check user is logged in or not.
+useEffect(() => {
+    setTimeOut(() => {
+        setIsloading(false);
+    }, 1000);
+}, [];)
+
+we use React.Memo function to speedy check the sign ot sign status etc.
+or can run sign in ir sign up functions fastly....
+const [userToken, setUserToken] = React.useState(null);
+const authContext = React.useMemo(() => {
+    signIn: () => {
+        setUserToken('abc');
+        setIsloading(false);
+    },
+    signOut: () => {
+        setUserToken(null);
+        setIsloading(false);
+    },
+    signUp: () => {
+        setUserToken('abc');
+        setIsloading(false);
+    }
+});
