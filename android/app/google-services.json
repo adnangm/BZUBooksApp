@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "812669314443",
+    "project_id": "bzubooksapp",
+    "storage_bucket": "bzubooksapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812669314443:android:5fbe6f2c8190ba62757b8e",
+        "android_client_info": {
+          "package_name": "com.bzubooksapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812669314443-33rknfd2ngprvngr5p2gu6s6ju73cor8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0wJOTWabG4n7aApLe745HzNK_pyt0NWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812669314443-33rknfd2ngprvngr5p2gu6s6ju73cor8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

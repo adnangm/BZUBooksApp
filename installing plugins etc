@@ -3,3 +3,8 @@
 3. react-native-vector-icons
 4. yarn add @react-navigation/material-bottom-tabs@^5.x react-native-paper react-native-vector-icons
 5. 
+
+
+firebase:
+reacn native firebase / appp
+yarn add @react-native-firebase/auth
